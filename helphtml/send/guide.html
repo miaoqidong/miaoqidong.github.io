@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>发送说明书</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+    .section {
+      background: #2196f3;
+      color: white;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 18px;
+    }
+    .arrow {
+      transition: transform 0.2s;
+    }
+    .content {
+      background: white;
+      padding: 15px;
+      margin-top: -5px;
+      margin-bottom: 10px;
+      border-radius: 0 0 8px 8px;
+      display: none;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+      /* Mobile friendly */
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      .section {
+        font-size: 16px;
+        padding: 12px;
+      }
+      .content {
+        font-size: 15px;
+        padding: 12px;
+      }
+      img.responsive-img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section" onclick="toggleContent('c1', this)">
+    图文指导教程① 单发 <span class="arrow">▶</span>
+  </div>
+  <div id="c1" class="content">①.要发送的好友或群要能在微信中被搜索出来<br><br><img class="responsive-img" src="pics/sousuo.png" alt="搜索"></div>
+
+  <div class="section" onclick="toggleContent('c2', this)">
+    图文指导教程② 单发 <span class="arrow">▶</span>
+  </div>
+  <div id="c2" class="content">②.搜索界面中确保没有重复名称的<br><br><img class="responsive-img" src="pics/jieguo.png" alt="结果"></div>
+
+  <div class="section" onclick="toggleContent('c3', this)">
+    图文指导教程③ 单发 <span class="arrow">▶</span>
+  </div>
+  <div id="c3" class="content">③.如何设置文字消息,图片,视频如何设置<br><br><img class="responsive-img" src="pics/shezhi.png" alt="设置"></div>
+
+  <div class="section" onclick="toggleContent('c4', this)">
+    图文指导教程④ 群发助手 <span class="arrow">▶</span>
+  </div>
+  <div id="c4" class="content">
+      <p>通过微信本身自带的群发助手功能实现.该功能目前为实验性功能,请以 <span style="color: red;">单发</span> 为主</p>
+      <p>[通过标签群发] 开关打开 则执行群发功能<br>④.微信好友和定时器内分别如何设置<br>通过给好友添加标签来群发<br>如果图片看不清,(截屏后)可通过双指按住屏幕放大</p>
+    <br><br>
+    <img class="responsive-img" src="pics/qunfa.png" alt="群发">
+    </div>
+
+  <div class="section" onclick="toggleContent('c5', this)">
+    如何发送文字,图片,视频 <span class="arrow">▶</span>
+  </div>
+  <div id="c5" class="content">
+    <p><strong>1. 如何发送文字</strong><br>在发送内容: 输入你想发送的文字</p>
+    <p><strong>2. 如何发送图片,视频</strong><br>把相册发送开关打开。例如你设置的是从第1个开始,共选中2个,意思就是从你相册的第一张开始,共发送2张。</p>
+    <p><strong>3. 如何同时发送文字和图片,视频</strong><br>每个定时器都可以设置3组,第一组发送文字,第二组发送图片,第三组发送视频。虽然不是一瞬间同时发送,但相差时间就在几秒内,完全可以看作同时发送。</p>
+    <img class="responsive-img" src="pics/tongshisend.png" alt="同时发送文字,图片,视频">
+  </div>
+
+<div class="section" onclick="toggleContent('c6', this)">
+其他常见问题解答 <span class="arrow">▶</span>
+</div>
+<div id="c6" class="content">
+<p>其他相关问题解答</p>
+<button onclick="window.location.href='https://mytiper.gitlab.io/send/question'" style="padding:10px 16px; background:#2196f3; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer;">点击查看</button>
+</div>
+
+  <script>
+    function toggleContent(id, header) {
+      const content = document.getElementById(id);
+      const arrow = header.querySelector('.arrow');
+
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.display = 'block';
+        arrow.style.transform = 'rotate(90deg)';
+      }
+    }
+  </script>
+</body>
+</html>

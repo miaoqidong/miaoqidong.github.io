@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>常见问题解答</title>
+<style>
+  body { background: #f7f7f7; margin: 0; padding: 15px; font-family: Arial; }
+  .section { background:#339df5; color:white; padding:14px; border-radius:10px; margin-bottom:10px; font-size:18px; display:flex; justify-content:space-between; cursor:pointer; }
+  .arrow { transition:transform 0.3s; }
+  .content { background:white; padding:15px; border-radius:8px; margin-bottom:12px; font-size:16px; line-height:1.6; display:none; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+  img.responsive-img { width:100%; border-radius:8px; margin-top:10px; }
+  button { padding:10px 16px; border:none; background:#ff5722; color:white; border-radius:6px; font-size:16px; cursor:pointer; margin-top:10px; }
+</style>
+<script>
+function toggle(id, header){
+  const c=document.getElementById(id);
+  const a=header.querySelector('.arrow');
+  if(c.style.display==='block'){ c.style.display='none'; a.style.transform='rotate(0deg)'; }
+  else{ c.style.display='block'; a.style.transform='rotate(90deg)'; }
+}
+</script>
+</head>
+<body>
+
+<!-- SECTION TEMPLATE APPLIED TO ALL -->
+
+<div class="section" onclick="toggle('c1',this)">作者想说的话 <span class="arrow">▶</span></div>
+<div id="c1" class="content">
+  认真阅读使用说明书,99%的疑问都会有答案。<br>
+  正所谓 磨刀不误砍柴工<br>不然瞎折腾一番,累不说,你还要来一句,卧槽,这什么软件,发送不了啊,垃圾。<br>
+  软件已经过多数人验证安全好使用。<br>
+  如果在正常使用过程中,有好的建议和bug反馈<br>
+  可以关注公众号 “秒启动App” 与我交流心得。
+</div>
+
+<div class="section" onclick="toggle('c2',this)">本软件值得信赖吗？ <span class="arrow">▶</span></div>
+<div id="c2" class="content">
+     
+        软件基础版功能可断网使用,120%的安全<br>
+        另外我想说的是,作者不会收集设备等信息<br>
+        1是不屑于<br>
+        2能力有限不会收集,就算是收集了也不知道有啥用<br>
+        只有被大厂收集了,才有用武之地<br>
+        所以大可放心使用
+    
+</div>
+
+<div class="section" onclick="toggle('c3',this)">申请权限多？ <span class="arrow">▶</span></div>
+<div id="c3" class="content">
+  
+        软件功能是:定时自动发消息<br>
+        所以,实际上只需要2个:无障碍权限(自动需要)和闹钟权限(定时需要)<br>
+        其它的权限皆为保活需要,如果你打算让手机屏幕一直亮着不息屏(手机就不会处于doze模式,会一直正常工作),且本软件一直处于前台(软件一直处于打开状态).那就可以不开启这些保活措施.<br>
+        这些保活措施放到任何软件上都适用,你去看看李跳跳这类软件是不是也需要保活?,本软件把能想到的保活措施都列出来了而已,可以选择性开启
+ 
+</div>
+
+<div class="section" onclick="toggle('c4',this)">推荐机型 <span class="arrow">▶</span></div>
+<div id="c4" class="content">
+      众所周知,安卓机型千千万,很难确保在所有机型上都完美运行,目前在如下机型上测试,运行效果比较稳定:<br>
+  <ul>
+        <li>红米note 12Tpro</li>
+        <li>小米13</li>
+        <li>vivo neo 5</li>
+        <li>联想 Y700 二代</li>
+    
+    </ul>
+    精力有限,其他机型,未做充分测试,实际效果需自行体验哦
+</div>
+
+<div class="section" onclick="toggle('c5',this)">如何发送文字/图片视频 <span class="arrow">▶</span></div>
+<div id="c5" class="content">
+    文字,图片,视频发送攻略
+<button onclick="window.location.href='https://mytiper.gitlab.io/send/guide'" style="padding:10px 16px; background:#2196f3; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer;">点击查看</button>
+</div>
+
+
+<div class="section" onclick="toggle('c6',this)">常见问题①：测试不成功？ <span class="arrow">▶</span></div>
+<div id="c6" class="content">
+    点击 [查看] 运行日志:分析原因
+    <ul>
+    
+        <li>1.如果是无障碍服务未开启,或定时开关未开启,则打开即可</li>
+
+        <li><span style="color: red;">2.启动微信后,但卡在了前几步中,导致后续无法正常执行了</span></li>
+        <li>可能是某些软件的新通知(显示在屏幕上方的悬浮通知)临时遮挡住了要点击的位置,</li>
+        <li>打开 [显示点击轨迹]开关 观察下是否是因为点击到了悬浮通知导致的,如果是则需要关闭</li>
+        
+            <img src="pics/closeXF.png" class="responsive-img"/>
+      
+        <li>3.如果找不到搜索图标,对应好友,说明软件的版本和微信版本不匹配导致,升级本软件或者降级微信版本</li>
+    </ul>
+
+</div>
+
+<div class="section" onclick="toggle('c7',this)">常见问题②：测试成功但定时不成功？ <span class="arrow">▶</span></div>
+<div id="c7" class="content">
+    先说结论:<br>
+    <span style="color: red;"> 只要测试能成功,那么定时发送也一定可以成功 </span><br>
+    如果定时发送失败, <span style="color: red;"> 一定是你保活措施做的不到位 </span>,导致软件被限制后台运行或者被杀后台<br>
+    注意: 现在的系统对第三方软件有严格的后台限制,就算保活措施全部到位了,依然可能 <span style="color: red;"> 偶尔出现延迟 1-3 分钟 </span>才执行任务,是正常的
+     就是说: 超过设定时间3分钟后还没执行的话,才可以判断此次定时任务失败<br>
+     分三种情况:<br>
+     <ul>
+        <span style="color: red;"> </span>
+        <li><span style="color: red;"> 1.手机无法自动点亮屏幕,当你手动解锁手机后,后续也无法发送</span></li>
+        我们打开软件,点击 [查看] 运行日志:<br>
+        如果日志里面什么有用的内容都没有出现<br>
+        说明: 软件被杀后台啦!!!<br>
+        保活措施不到位导致,请认真设置保活,查看常见问题②之1:保活措施不到位
+
+        <li><span style="color: red;"> 2.手机无法自动点亮屏幕,当你手动解锁手机后,后续能正常发送</span></li>
+        我们打开软件,点击 [查看] 运行日志:<br>
+        如果没出现类似红色框内的解锁任务提示,则说明:软件被限制后台运行啦!!!
+    
+            <img src="pics/0008.png" class="responsive-img"/>
+        
+        未允许软件后台运行导致,请允许 本软件后台运行,查看常见问题②之2:权限未开启完整
+        <li><span style="color: red;"> 3.手机能自动点亮屏幕,但无法自动解锁</span></li>
+        说明: 软件运行正常,只是无法自动解锁<br>
+        我们打开软件,点击 [查看] 运行日志:<br>
+        根据日志里的提示,分析下为何无法解锁<br>
+        结合日志,并查看常见问题②之3:能点亮屏幕,无法解锁设备
+
+
+
+    </ul>
+</div>
+
+<div class="section" onclick="toggle('c8',this)">常见问题②之1：保活措施不到位 <span class="arrow">▶</span></div>
+<div id="c8" class="content">
+   <ul>
+        <li>1 设置保活措施 <a href="https://mp.weixin.qq.com/s/umGL41SgEapebNA8Pz1Tjw"> <span style="color: red;"> 点击此处查看☞通用保活教程</span></a></li>
+        <li>2 在 [设置]->[电池]选项中,把手机模式设置为性能(Monster)模式,把所有可能影响后台正常运行的因素都排除</li>
+        比如,关闭超级省电,关闭锁屏清理内存,关闭锁屏断网,关闭睡眠待机优化,冻结闲置应用,休眠时省电,允许后台高耗电,(虚拟)内存融合开启,应用内存压缩关闭
+
+        <li>3 保活措施的说明: 不是说设置了保活措施后,软件就100%不会被杀后台了,(世界上没有100%的事)
+            如果你打开的软件过多,系统运行内存不足,依然是有可能被杀后台,所以不要打开过多应用</li>
+        <span style="color: red;">注意: 现在的系统对第三方软件有严格的后台限制,就算保活措施全部到位了,依然可能偶尔出现延迟 1-3 分钟才执行任务,是正常的</span>
+
+        小米手机要手动去设置中 允许后台弹出界面，锁屏显示，省电策略为无限制 
+        华为荣耀手机要去手机管家中 把软件设置成手动管理 ,且允许自启动,允许关联启动,允许后台活动等开关要打开  
+        OPPOvivo系 如果有 后台高耗电 设置项 把软件设置成允许,速冻模式也要关闭 
+        
+            <img src="pics/autostart_xpq.png"class="responsive-img"/>
+        
+        如果你以前打开过开发者模式,不小心点了限制后台应用的个数,改为标准限制<br>
+        其他品牌类的手机也都大同小异<br> 
+     
+        在最近任务列表中下拉，或者长按（根据手机型号不同可能略有差别）给 软件 加个锁 避免被清理后台 <br>
+        当你自己手动在最近任务列表中,滑动关闭软件后,软件必然会被杀死,这个跟加锁不加锁无关 <br>
+        这个时候如果你设置了允许自启动,小米华为手机则会自动重启无障碍服务,不影响继续使用,其它品牌应该也是<br>
+        如果没有允许自启动,则不会自动重连<br>
+   
+        如果全部设置了,发现没有效果,别担心,电子产品很多的问题,只需要一个重启即可解决
+    </ul>
+</div>
+
+<div class="section" onclick="toggle('c9',this)">常见问题②之2：权限未开启完整 <span class="arrow">▶</span></div>
+<div id="c9" class="content">
+     <ul>
+        <li>在 [设置]->[权限管理]选项中,找到 后台弹出界面权限,锁屏显示权限,最好把本软件和微信的这两个权限都打开</li>
+        
+        <li> <span style="color: red;"> 锁屏显示权限和后台弹出界面权限</span>(部分品牌如华为,荣耀机型上可能没有这两权限)</li>
+      
+            <img src="pics/backgroundshow_xpq.png" class="responsive-img"/>
+      
+
+    </ul>
+</div>
+
+<div class="section" onclick="toggle('c10',this)">常见问题②之3：能点亮但无法解锁 <span class="arrow">▶</span></div>
+<div id="c10" class="content">
+     <ul>
+         <span style="color: red;">人脸,指纹,和纯数字密码是可以同时存在 </span>的,需要注意的点就是 需要纯数字密码,不要数字和字母混用
+
+        我们打开软件,点击 [查看] 运行日志:
+        根据日志里的提示,看看是卡在了哪一步,找到对应解决办法:
+        <li> <span style="color: red;"> 1.能否自动上滑</span>?</li>
+        新出的手机,基本上都不用换主题了,都能自动上滑来到输入锁屏密码界面
+        如果不能,请去手机主题商店中更换当前主题,换成第三方开发者的主题,可多换几个试试
+        基本上换过主题都是可以上滑的,如果换了多个主题依然还是不能自动上滑
+        那最好还是<span style="color: red;">充电保持屏幕常亮(本软件也可以让手机屏幕常亮) </span>,把手机亮度调到最低,或者换个手机(小米,华为,vivo等)
+        <li> <span style="color: red;">2.自动上滑后能否自动输入密码 </span>?</li>
+        目前 小米系,华为系,vivo品牌均已适配,其它品牌手机理论上也能,如果不能可联系协助我们适配一下你的机型
+        如果手机能自动上滑来到输入密码界面,但是却不能自动输入密码
+        这种情况就<span style="color: red;">需要关闭手机的锁屏密码了,也即手机屏幕点亮后,再上滑一下就能进入系统 </span> 
+        并在本软件中输入解锁密码时,仅输入一个数字 0 
+        当然如果你的手机点亮屏幕后,可直接就进入系统,连上滑都不需要,这样就更稳定了.
+        以小米手机为例: 首先点击系统版本号5次,进入"开发者选项"
+        
+            <img src="pics/0005.png" class="responsive-img"/>
+        
+        如果你的手机没有自带这个功能,可用本软件的  <span style="color: red;">"屏幕常亮" </span> 功能试一下,开启后,把手机亮度调到最低,其实也不算多耗电
+    </ul>
+</div>
+
+<div class="section" onclick="toggle('c11',this)">常见问题3：能保证100%成功吗？ <span class="arrow">▶</span></div>
+<div id="c11" class="content">
+     答案是否定的,世界上基本没有100%的事<br>
+        如果谁告诉你100%,那你可要小心了.<br>
+        我们能做的就是尽量提升发送成功率<br>
+     <ul>
+       
+        <li>尽量在最近任务列表中,只保留微信一个APP常驻后台,本软件也需要(可以在任务列表隐藏).</li>
+
+    </ul>
+</div>
+
+<div class="section" onclick="toggle('c12',this)">常见问题4：会员权益 <span class="arrow">▶</span></div>
+<div id="c12" class="content">
+     <ul>
+        <li>1.会员不仅可以解锁更多个定时器</li>
+        <li>2.也会去掉开屏广告</li>
+
+
+    </ul>
+</div>
+
+
+<div class="section" onclick="toggle('c14',this)">注意事项 <span class="arrow">▶</span></div>
+<div id="c14" class="content">
+    <ul>
+        <li>1.手机关机状态下,是不会触发定时任务执行的</li>
+        <li>2.手机重启后,需要手动解锁一下手机(目的是确保本软件能随着手机的重启,自动重连无障碍服务,如果没有自动重连,则需要手动去开启无障碍服务),任务才会恢复执行</li>
+        <li>3.如果有锁屏密码,本软件无法解锁时,那就取消手机的锁屏密码</li>
+        <li>4.为避免一次定时任务中反复的锁屏解锁,建议手机自动息屏时间,调整为无操作后2分钟或以上
+            (注:如果每个定时器你只设置了一个任务,那息屏时间就无所谓多长)</li>
+        <li>5.部分手机需要打开本软件和微信的 后台弹出界面 权限</li>
+        <li>6.好友或群聊建议使用备注名,名称不要带有一些特殊的符号或表情</li>
+        <li>7.点击 "测试" 按钮,触发的自动执行,无论是否发送成功,2分钟后都会中止该次测试执行任务</li>
+        <li>8.由设置的定时器时间触发的自动执行,无论是否发送成功,2分钟后都会中止本次执行任务并自动开启第二天的自动任务,如需停止第二天的定时任务,请关闭定时器右侧的开关哦</li>
+        <li>9.微信如果被系统杀后台了,定时任务可能会卡住,故微信也要像本App一样进行保活设置</li>
+        <li>10.如果你的手机杀后台比较严重,尽管你设置了保活,微信还总是被杀后台,从而导致第一次发送总是卡住,
+            那么这里提供一个思路来解决:每组定时器均可设置三个要发送的对象(也即三个定时任务),可以把第二个和第一个的设置成一模一样
+            ,这样就算第一个定时任务卡住了,第二个能正常执行,从而保证完成任务.
+        </li>
+
+    </ul>
+</div>
+
+<div class="section" onclick="toggle('c15',this)">如何卸载本软件 <span class="arrow">▶</span></div>
+<div id="c15" class="content">
+     <ul>
+        <li>1.如果你没有授权设备管理员权限,跟其他软件是一样的卸载方式,长按即可卸载</li>
+        <li>2.如果你授权了软件设备管理员权限,部分手机(华为等)卸载前要取消该授权.才可卸载.</li>
+    
+        方式一:<br>
+        <li>2.1点击主界面的 保活  按钮</li>
+        <li>2.2点击 设备管理员  的按钮</li>
+        <li>2.3点击 去开启(在手机权限管理中关闭授权)</li>
+        方式二:<br>
+        <li>7.0以上的android系统,可以在桌面长按本软件图标,会弹出取消管理员的快捷方式</li>
+    </ul>
+</div>
+
+</body>
+</html>
