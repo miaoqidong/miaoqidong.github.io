@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>前提设置说明书</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background: #f7f7f7;
+          padding: 20px;
+        }
+        .section {
+          background: #2196f3;
+          color: white;
+          padding: 15px;
+          margin-bottom: 10px;
+          border-radius: 8px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 18px;
+        }
+        .arrow {
+          transition: transform 0.2s;
+        }
+        .content {
+          background: white;
+          padding: 15px;
+          margin-top: -5px;
+          margin-bottom: 10px;
+          border-radius: 0 0 8px 8px;
+          display: none;
+          font-size: 16px;
+          line-height: 1.6;
+        }
+          /* Mobile friendly */
+        @media (max-width: 600px) {
+          body {
+            padding: 10px;
+          }
+          .section {
+            font-size: 16px;
+            padding: 12px;
+          }
+          .content {
+            font-size: 15px;
+            padding: 12px;
+          }
+          img.responsive-img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-top: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+
+<div class="section" onclick="toggleContent('c1', this)">
+    微信中设置显示消息详情
+    <span class="arrow">▶</span>
+</div>
+<div id="c1" class="content">允许微信发送通知(一般默认都是开启的):  打开微信,点击右下角的 "我"标签,---->点击设置--->点击新消息通知--->通知显示消息详情
+    <br><br><img class="responsive-img" src="pics/0001.png" alt="点击 我"><img class="responsive-img" src="pics/0002.png" alt="新消息通知"><img class="responsive-img" src="pics/0003.png" alt="显示消息详情"></div>
+
+<div class="section" onclick="toggleContent('c2', this)">
+    要拆红包的人或群不能免打扰<span class="arrow">▶</span>
+</div>
+<div id="c2" class="content">要拆红包的人或群,绝对不能带有静音的标志,也即不可设置成免打扰(当然,如果你不需要后台跳转,那你设置也无所谓,只会在进入到聊天窗口内才会拆)
+    <br><br><img class="responsive-img" src="pics/0004.png" alt="不可设置成免打扰"></div>
+
+<div class="section" onclick="toggleContent('c3', this)">
+    要拆红包的人或群,最好设置一下 备注 <span class="arrow">▶</span>
+</div>
+<div id="c3" class="content">要拆红包的人或群,最好设置一下 备注<br><br>
+    <img class="responsive-img" src="pics/0005.png" alt="未设置">
+    <img class="responsive-img" src="pics/0006.png" alt="已设置">
+    <img class="responsive-img" src="pics/0007.png" alt="未设置">
+    <img class="responsive-img" src="pics/0008.png" alt="已设置">
+
+</div>
+
+<div class="section" onclick="toggleContent('c4', this)">
+    核心功能: 免打扰拆红包 <span class="arrow">▶</span>
+</div>
+<div id="c4" class="content">
+    <p>本软件的核心优势: <span style="color: red;">免打扰拆红包</span></p>
+    <p>有些朋友有这个疑问了,不开微信中的免打扰呢,通知消息就嘀嗒个不停,烦死了,开了免打扰呢,通知栏是不提醒不吵了,但也不能后台跳转拆红包了</p>
+    <p>我们的软件就可以做到微信中不设置免打扰,但也不吵,不影响后台拆红包</p>
+    <br><br>
+    <img class="responsive-img" src="pics/0009.png" alt="烦扰">
+    <br>对应的个人或群的 备注名<br>
+    <img class="responsive-img" src="pics/0010.png" alt="备注名">
+    <br>在本软件中的免打扰设置项中,填入对应的个人或群的 备注名<br>
+    <img class="responsive-img" src="pics/0011.png" alt="填写备注名">
+</div>
+
+
+<div class="section" onclick="toggleContent('c5', this)">
+    软件主界面功能介绍 <span class="arrow">▶</span>
+</div>
+<div id="c5" class="content">
+    左上角按钮 开通会员,右上角按钮,详细设置界面
+    <br>
+    <img class="responsive-img" src="pics/0012.png" alt="烦扰">
+    <br>购买,激活卡密<br>
+    <img class="responsive-img" src="pics/0013.png" alt="备注名">
+
+</div>
+
+
+
+<script>
+    function toggleContent(id, header) {
+      const content = document.getElementById(id);
+      const arrow = header.querySelector('.arrow');
+
+      if (content.style.display === 'block') {
+        content.style.display = 'none';
+        arrow.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.display = 'block';
+        arrow.style.transform = 'rotate(90deg)';
+      }
+    }
+</script>
+</body>
+</html>
